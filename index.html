@@ -7,12 +7,13 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="./css/main.css">
-    <script defer src="./main.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
 </head>
 
 <body>
@@ -175,17 +176,17 @@
         <!-- PROFILE -->
         <section class="section section--profile">
             
-            <div class="inner">
+            <div class="inner clearfix">
 
                 <h3>ABOUT ME</h3>
-                <div class="profile__tab">
-                    <div class="tab t1">1</div>
-                    <div class="tab t2">2</div>
-                    <div class="tab t3">3</div>
-                </div>
+                <ul id="profile__tab">
+                    <li class="tab t1" value="0">tab1</li>
+                    <li class="tab t2" value="1">tab2</li>
+                    <li class="tab t3" value="2">tab3</li>
+                </ul>
 
-                <div class="profilebox">
-                    <div class="box1">
+                <div class="profile__box">
+                    <div class="box box1" value="0">
                         <div class="profile--img float--left">
                             <img src="./img/profileImg.jpg" alt="profileImg">
                             <p>KIM GEUM MI</p>
@@ -200,11 +201,33 @@
                             </p>
                         </div>
                     </div>
-                    <div class="box2">
-                        
+                    <div class="box box2" value="1">
+                        <div class="profile--img float--left">
+                            <p>KIM GEUM MI</p>
+                        </div>
+                        <div class="profile--summary float--right">
+                            <p>학부생 시절, 현장 실습을 통해 자연스럽게 웹에 대해 관심을 가지게 되었습니다.
+                                html, css, javascript, java 등을 사용하여 웹 개발을 경험하면서 즐겁다는 느낌을 받았고,
+                                이러한 경험은 저에게 개발에 대한 재미와, 진로에 대한 확신을 주었습니다.
+                                학교를 졸업한 이후에는 웹에 대해서 좀 더 자세하게 배우기 위하여 국비지원 교육과정인 `자바 웹 개발자 양성과정` 과
+                                패스트 캠퍼스 온라인 강의를 수강하면서 웹 개발에 대한 기초를 쌓았습니다.
+                                이러한 저만의 경험을 통해 얻은 지식과 역량을 바탕으로 믿을 수 있는 인재가 될 수 있도록 항상 노력하겠습니다.
+                            </p>
+                        </div>
                     </div>
-                    <div class="box3">
-
+                    <div class="box box3" value="2">
+                        <div class="profile--img float--left">
+                            <p>KIM GEUM MI</p>
+                        </div>
+                        <div class="profile--summary float--right">
+                            <p>학부생 시절, 현장 실습을 통해 자연스럽게 웹에 대해 관심을 가지게 되었습니다.
+                                html, css, javascript, java 등을 사용하여 웹 개발을 경험하면서 즐겁다는 느낌을 받았고,
+                                이러한 경험은 저에게 개발에 대한 재미와, 진로에 대한 확신을 주었습니다.
+                                학교를 졸업한 이후에는 웹에 대해서 좀 더 자세하게 배우기 위하여 국비지원 교육과정인 `자바 웹 개발자 양성과정` 과
+                                패스트 캠퍼스 온라인 강의를 수강하면서 웹 개발에 대한 기초를 쌓았습니다.
+                                이러한 저만의 경험을 통해 얻은 지식과 역량을 바탕으로 믿을 수 있는 인재가 될 수 있도록 항상 노력하겠습니다.
+                            </p>
+                        </div>
                     </div>
                     
                 </div>
@@ -214,18 +237,86 @@
         </section>
 
         <!-- PORTFOLIO -->
-        <section class="section section--porfolio">
+        <section class="section section--portfolio">
+            
+            <div class="inner clearfix">
+
+                <h3>PORTFOLIO</h3>
+                <div class="portfolio__container">
+
+                    <div class="portfolio__box box1">
+                        <div class="portfolio--img">
+                            <img src="./img/portfolioImg.JPG" alt="portifolioImg-1">
+                        </div>
+                        <div class="portfolio--summary">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus nisl eu ullamcorper sodales.
+                                Sed euismod turpis turpis, a viverra est venenatis cursus. Donec vel tellus leo. Maecenas massa nulla,
+                                porta et nibh nec, vehicula ultricies tortor. Vivamus ac pulvinar nunc, sed tempor urna.
+                                Maecenas suscipit ante et massa semper vehicula. Nunc non dolor a mauris faucibus ornare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__box box2">
+                        <div class="portfolio--img">
+                            <img src="./img/portfolioImg.JPG" alt="portifolioImg-1">
+                        </div>
+                        <div class="portfolio--summary">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus nisl eu ullamcorper sodales.
+                                Sed euismod turpis turpis, a viverra est venenatis cursus. Donec vel tellus leo. Maecenas massa nulla,
+                                porta et nibh nec, vehicula ultricies tortor. Vivamus ac pulvinar nunc, sed tempor urna.
+                                Maecenas suscipit ante et massa semper vehicula. Nunc non dolor a mauris faucibus ornare.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio__box box3">
+                        <div class="portfolio--img">
+                            <img src="./img/portfolioImg.JPG" alt="portifolioImg-1">
+                        </div>
+                        <div class="portfolio--summary">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris finibus nisl eu ullamcorper sodales.
+                                Sed euismod turpis turpis, a viverra est venenatis cursus. Donec vel tellus leo. Maecenas massa nulla,
+                                porta et nibh nec, vehicula ultricies tortor. Vivamus ac pulvinar nunc, sed tempor urna.
+                                Maecenas suscipit ante et massa semper vehicula. Nunc non dolor a mauris faucibus ornare.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
         </section>
 
         <!-- CONTACT -->
         <section class="section section--contact">
 
+            <div class="inner">
+
+                <h3>CONTACT ME</h3>
+                <div class="contact--box">
+                    <p>저의 포트폴리오를 봐주셔서 감사합니다.
+                    </p>
+                    <p>이메일주소: geummi0917@gmail.com</p>
+                    <p>전화번호: 010-6396-9141</p>
+                </div>
+
+            </div>
+
         </section>
 
         <!-- FOOTER -->
-        <footer class="section">
+        <footer class="section section--footer">
 
+            <div class="inner clearfix">
+
+                <div class="summary">
+                    <p>본 페이지는 상업용이 아닌 개인 포트폴리오용으로 제작되었습니다</p>
+                    <p>@2021 GEUM MI KIM. All rights Reserved.</p>
+                </div>
+
+            </div>
         </footer>
 
 
