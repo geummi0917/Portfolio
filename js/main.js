@@ -15,17 +15,12 @@ $(document).ready(function() {
     var sectionProfile = document.querySelector('.section--profile')
     
     // 홈 타이틀 클릭하면 전체 페이지 나타내기
-    $('.home--title svg').click(function () {
+    $('#home--title svg').click(function () {
         var section = document.querySelectorAll('.body__container > .section');
         var portfolio = document.querySelector('.section--portfolio');
         for (let i = 0; i < section.length; i++) {
             section[i].style.display = "block";
         }
-        
-        $('.section--home .home--img svg').css({
-            "position": "relative"
-        })
-        
         
         // 스크롤 시 헤더 나타내기
         var scene = new ScrollMagic.Scene({

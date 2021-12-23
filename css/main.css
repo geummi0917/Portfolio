@@ -34,15 +34,15 @@
 /* HEADER */
 header {
     width: 100%;
-    background: rgba(230, 230, 230, 0.8);
-    box-shadow: 0 0.5px 2px 1px rgba(182, 182, 182, 0.5);
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.5px 2px 1px rgba(221, 221, 221, 0.5);
     position: fixed;
     z-index: 1;
 }
 header .inner {
     margin: 0 auto;
-    width: 90%;
-    height: 78px;
+    width: 70%;
+    height: 72px;
 }
 header .menu-group {
     display: flex;
@@ -53,7 +53,7 @@ header .menu-group .logo {
     width: 30%;
 }
 header .menu-group .logo a {
-    font-size: 30px;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
 }
@@ -75,7 +75,7 @@ header .main-menu li {
 header .main-menu li a {
     display: block;
     padding: 10px;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: normal;
     text-decoration: none;
     color: #3c4146;
@@ -86,61 +86,35 @@ header .main-menu li a:hover {
 
 /* HOME */
 .section--home {
-    height: 100%;
+    height: 780px;
+    background-color: burlywood;
 }
 .section--home .inner {
-    position: relative;
-    padding: 50px 0;
+    height: 100%;
+    width: 90%;
 }
 .section--home .home--img {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
-    display: flex;
+    position: relative;
+    background-image: url("/img/homeImg.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 90%;
 }
-.section--home .home--img svg{
-    max-width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    overflow: auto;
-}
-.home--img svg ellipse, .home--img svg circle {
-    animation: imgstroke 1s linear;
-    animation-fill-mode: forwards;
-}
-@keyframes imgstroke {
-    0% {
-        fill: transparent;
-    }
-    
-    70% {
-        stroke-width: 3px;
-        stroke-dashoffset: 326px;
-    }
-
-    98% {
-        stroke-width: 3px;
-    }
-
-    100% {
-        stroke-dashoffset: 0px;
-    }
-}
-.section--home .home--title {
+#home--title {
     width: 100%;
-    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
+    position: absolute;
     margin: 0 auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
 }
-.section--home .home--title svg text {
+#home--title svg text {
     font-family: 'Staatliches', cursive;
-    font-size: 6em;
+    font-size: 97px;
     fill: transparent;
     stroke-dasharray: 326px;
     animation: stroke 2.5s linear;
@@ -167,7 +141,7 @@ header .main-menu li a:hover {
         stroke-dashoffset: 0px;
     }
 }
-.section--home .home--title svg:hover text {
+#home--title svg:hover text {
     cursor: pointer;
     fill: rgb(189, 189, 189)!important;
 }
@@ -185,19 +159,19 @@ header .main-menu li a:hover {
 /* PROFILE */
 .section--profile {
     display: none;
-    height: 900px;
+    min-height: 650px;
     position: relative;
 }
 .section--profile .inner {
     max-width: 980px;
     height: 100%;
-    padding: 50px 0;
 }
 .section--profile h3 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 70px;
+    padding: 20px 0;
+    margin: 50px 0;
 }
 #profile__tab {
     display: flex;
@@ -206,15 +180,19 @@ header .main-menu li a:hover {
 }
 #profile__tab .tab {
     width: 150px;
-    font-size: 25px;
+    font-size: 20px;
     border-radius: 10px 10px 0 0;
     text-align: center;
     padding: 20px;
     list-style: none;
     cursor: pointer;
 }
+#profile__tab .tab:hover {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+}
 .clicked {
-    box-shadow: 0 -7px 1px -1px rgba(145, 145, 145, 0.8);
+    box-shadow: 0 -7px 1px -1px rgba(175, 175, 175, 0.8);
     font-weight: 700;
 }
 #profile__tab .t1 {
@@ -241,24 +219,23 @@ header .main-menu li a:hover {
     border-color: rgb(252, 242, 153);
 }
 .section--profile .box1 .profile--img {
-    padding: 50px;
+    padding: 40px;
     box-sizing: border-box;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
 }
 .section--profile .box1 .profile--img img{
-    width: 200px;
+    width: 150px;
 }
 .section--profile .box1 .profile--img p {
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: bold;
     margin-top: 22px;
 }
 .section--profile .box1 .profile--summary {
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 17px;
     padding: 50px;
     line-height: 1.7;
     margin: 0 auto;
@@ -278,14 +255,15 @@ header .main-menu li a:hover {
 .section--portfolio {
     display: none;
     position: relative;
+    min-height: 600px;
 }
 .section--portfolio .inner {
     width: 80%;
-    height: 100%;
-    padding: 100px 0;
+    padding: 10px 0;
+    margin: 20px auto 100px;
 }
 .section--portfolio .inner h3 {
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 70px;
@@ -297,14 +275,15 @@ header .main-menu li a:hover {
     margin: 0 auto;
 }
 .section--portfolio .portfolio__box {
-    width: 90%;
-    border: 1px solid black;
+    width: 80%;
     display: inline-block;
     margin: 0 auto;
     cursor: pointer;
+    border: 0.2px solid rgba(211, 211, 211, 0.3);
 }
 .portfolio__box:hover {
     box-shadow: 10px 10px 10px 3px rgba(156, 156, 156, 0.5);
+    width: 81%;
 }
 .portfolio__box .portfolio--img {
     box-sizing: border-box;
@@ -313,37 +292,39 @@ header .main-menu li a:hover {
     width: 100%;
 }
 .portfolio__box .portfolio--summary p {
-    font-size: 17px;
+    padding: 13px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: center;
 }
 
 /* CONTACT */
 .section--contact {
     display: none;
-    min-height: 300px;
-    background-color: rgba(207, 188, 207, 0.5);
+    background-color: rgba(240, 240, 240, 0.5);
 }
 .section--contact .inner{
     width: 80%;
-    padding: 50px 0;
+    padding: 40px 0;
     margin: 0 auto;
 }
 .section--contact h3 {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 700;
     text-align: center;
-    padding: 30px 0;
+    margin: 20px 0 30px;
 }
 .section--contact .contact--box {
-    font-size: 18px;
+    font-size: 14px;
     text-align: center;
-    line-height: 1.7;
+    line-height: 2.3;
 }
 
 /* FOOTER */
 .section--footer {
     display: none;
     width: 100%;
-    background-color:rgba(80, 80, 80, 0.7);
+    background-color:rgba(116, 116, 116, 0.7);
 }
 .section--footer .inner {
     padding: 20px;
@@ -357,6 +338,6 @@ header .main-menu li a:hover {
 .section--footer .summary p {
     text-align: center;
     color: #fefefe;
-    font-size: 15px;
+    font-size: 12px;
     line-height: 1.8;
 }
