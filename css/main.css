@@ -109,8 +109,40 @@ header .main-menu li a:hover {
     position: absolute;
     margin: 0 auto;
     left: 50%;
-    top: 48%;
+    top: 45%;
     transform: translate(-50%, -50%);
+}
+[data-tooltip]:before {
+    position : absolute;
+    content : attr(data-tooltip);
+    left: 70%;
+    top: -30%;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 13px;
+    border: 2px solid rgba(255, 171, 15, 1);
+    background-color: rgba(255, 171, 15, 1);
+    border-radius: 10px;
+    opacity : 0;
+    transition: all 0.2s linear;
+}
+[data-tooltip]::after {
+    content: '';
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent;
+    border-top-color: rgba(255, 171, 15, 1); /* 50% 투명한 검정색 6px 테두리선 */
+    width: 0; /* 가상 요소의 크기가 0이기 때문에 테두리선이 삼각형 모양이 됨 */
+    height: 0;
+    position: absolute;
+    left: 73%;
+    top: -4%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: all 0.2s linear;
+}
+[data-tooltip]:hover:before, [data-tooltip]:hover:after {
+    opacity : 1;
 }
 #home--title svg text {
     font-family: 'Staatliches', cursive;
@@ -143,112 +175,108 @@ header .main-menu li a:hover {
 }
 #home--title svg:hover text {
     cursor: pointer;
-    fill: rgb(189, 189, 189)!important;
-}
-.section--home .home--description {
-    display: none;
-    padding: 10px;
-    margin: 0 auto;
-    margin-top: 20px;
-}
-.section--home .home--description p{
-    font-size: 50px;
-    background-color: orange;
+    fill: rgb(105, 105, 105)!important;
 }
 
 /* PROFILE */
 .section--profile {
     display: none;
-    min-height: 650px;
     position: relative;
 }
 .section--profile .inner {
-    max-width: 980px;
-    height: 100%;
+    width: 80%;
+    padding: 50px 0;
 }
 .section--profile h3 {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
-    padding: 20px 0;
-    margin: 50px 0;
-}
-#profile__tab {
-    display: flex;
-    padding-left: 0px;
-    margin: 0 auto;
-}
-#profile__tab .tab {
-    width: 150px;
-    font-size: 20px;
-    border-radius: 10px 10px 0 0;
-    text-align: center;
-    padding: 20px;
-    list-style: none;
-    cursor: pointer;
-}
-#profile__tab .tab:hover {
-    font-weight: 700;
-    color: rgba(255, 255, 255, 0.9);
-}
-.clicked {
-    box-shadow: 0 -7px 1px -1px rgba(175, 175, 175, 0.8);
-    font-weight: 700;
-}
-#profile__tab .t1 {
-    background-color: rgb(252, 242, 153);
-}
-#profile__tab .t2 {
-    background-color: rgb(134, 186, 230);
-}
-#profile__tab .t3 {
-    background-color: rgb(159, 147, 240);
+    margin: 0 20px;
+    padding: 60px 0;
 }
 .section--profile .profile__box {
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    padding: 20px 0;
 }
-.section--profile .box {
-    position: absolute;
-    margin: 0 auto;
-    border-radius: 0 10px 10px 10px;
-    border: 22px solid black;
+.section--profile .profile__img {
+    margin-right: 20px;
 }
-.section--profile .profile__box .box1 {
+.section--profile .profile__img img{
+    width: 170px;
+}
+.section--profile .profile__summary {
+    padding: 20px 50px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.section--profile .profile__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 0;
+}
+.section--profile .profile__info .info_wrapper {
     display: flex;
-    border-color: rgb(252, 242, 153);
+    padding: 25px 20px;
 }
-.section--profile .box1 .profile--img {
-    padding: 40px;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
+.section--profile .profile__info .info_wrapper .info_icon {
+    width: 40px;
+    margin-right: 50px;
 }
-.section--profile .box1 .profile--img img{
-    width: 150px;
+.section--profile .profile__info .info_wrapper .info_icon img {
+    width: 100%;
 }
-.section--profile .box1 .profile--img p {
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    margin-top: 22px;
+.section--profile .profile__info .info_wrapper .info_field {
+    text-align: left;
 }
-.section--profile .box1 .profile--summary {
+.section--profile .profile__info .info_wrapper .info_field .info_label {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+.section--profile .profile__info .info_wrapper .info_field .info_value {
     font-size: 17px;
-    padding: 50px;
-    line-height: 1.7;
+    font-weight: 400;
+    margin-top: 27px;
+}
+
+/* SKILLS */
+.section--skills {
+    display: none;
+    position: relative;
+    min-height: 600px;
+    background-color: rgba(245, 245, 245, 0.9);
+}
+.section--skills .inner {
+    width: 80%;
+    padding: 10px 0;
+    margin: 20px auto 100px;
+}
+.section--skills .inner h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 20px;
+    padding: 60px 0;
+}
+.section--skills .skills__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.section--skills .skills__container .skills_wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
 }
-.section--profile .box2 {
-    display: none;
-    border-color: rgb(134, 186, 230);
+.section--skills .skills__container .skills_wrapper .skills_icon i {
+    font-size: 75px;
 }
-.section--profile .box3 {
-    display: none;
-    border-color: rgb(159, 147, 240);
+.section--skills .skills__container .skills_wrapper .skills_name {
+    padding: 15px;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 /* PORTFOLIO */
@@ -266,7 +294,8 @@ header .main-menu li a:hover {
     font-size: 30px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 70px;
+    margin: 0 20px;
+    padding: 60px 0;
 }
 .portfolio__container {
     display: grid;
@@ -297,11 +326,36 @@ header .main-menu li a:hover {
     line-height: 1.5;
     text-align: center;
 }
+.portfolio__box .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio__box .modal .hidden {
+    display: none;
+}
+.portfolio__box .modal .bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.portfolio__box .modal_box {
+    position: absolute;
+    background-color: #fff;
+    width: 400px;
+    height: 200px;
+    padding: 15px;
+  }
 
 /* CONTACT */
 .section--contact {
     display: none;
-    background-color: rgba(240, 240, 240, 0.5);
+    background-color: rgba(245, 245, 245, 0.9);
 }
 .section--contact .inner{
     width: 80%;

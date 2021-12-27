@@ -10,6 +10,13 @@ $(document).ready(function() {
             });
         });
     });
+
+    // $("#home--title").tooltip({
+    //     tooltipClass:'tooltipUI',
+    //     content: function(callback) {
+    //       callback($(this).prop('title'));
+    //     }
+    // })
     
     var controller = new ScrollMagic.Controller();
     var sectionProfile = document.querySelector('.section--profile')
@@ -38,20 +45,30 @@ $(document).ready(function() {
         
     })
 
-    // 프로필 섹션에서 각 항목 누르면 나타나기
-    $('.tab').click(function(e) {
-        var tabNum = document.querySelectorAll('.tab');
-        var boxNum = document.querySelectorAll('.box');
+    // // 프로필 섹션에서 각 항목 누르면 나타나기
+    // $('.tab').click(function(e) {
+    //     var tabNum = document.querySelectorAll('.tab');
+    //     var boxNum = document.querySelectorAll('.box');
         
-        for(let i=0; i<tabNum.length; i++) {
-            if(e.target.value === i) {
-                boxNum[i].style.display = "flex";
-                tabNum[i].classList.toggle("clicked", true);
-            } else {
-                boxNum[i].style.display = "none";
-                tabNum[i].classList.toggle("clicked", false);
-            }
-        }
-    })
+    //     for(let i=0; i<tabNum.length; i++) {
+    //         if(e.target.value === i) {
+    //             boxNum[i].style.display = "flex";
+    //             tabNum[i].classList.toggle("clicked", true);
+    //         } else {
+    //             boxNum[i].style.display = "none";
+    //             tabNum[i].classList.toggle("clicked", false);
+    //         }
+    //     }
+    // })
+
+    const modalOpen = () => {
+        document.querySelector('modal').classList.remove('hidden');
+    }
+
+    const modalClose = () => {
+        document.querySelector('modal').classList.add('hidden');
+    }
+
+    document.querySelector('profile__box').addEventListener("click", "open");
 
 })
