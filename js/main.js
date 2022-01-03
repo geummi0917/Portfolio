@@ -18,5 +18,5 @@ $(document).ready(function () {
     document.querySelector('#home').scrollIntoView({
         behavior: "smooth"
     });
-
+    
 })

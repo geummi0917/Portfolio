@@ -193,16 +193,13 @@ header .inner .menu-group .main-menu li a:hover {
     }
     10% {
     }
-
     70% {
         fill: transparent;
     }
-
     98% {
         stroke: #3b3b3b;
         stroke-width: 3px;
     }
-
     100% {
         fill: #3b3b3b;
         stroke: #3b3b3b;
@@ -303,6 +300,7 @@ header .inner .menu-group .main-menu li a:hover {
     text-align: left;
 }
 #aboutme .inner .info__container .wrapper .info_field .info_label {
+
     font-size: 19px;
     font-weight: 700;
     margin-top: 5px;
