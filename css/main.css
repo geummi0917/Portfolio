@@ -1,0 +1,402 @@
+.body__container {
+    padding: 10px 0;
+    width: 100%;
+    background-color: #f8f3e8ea;
+}
+.section {
+    /* border-bottom: 1px solid slateblue; */
+}
+
+/* FLOAT CLEARFIX */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.float--left {
+    float: left;
+}
+.float--right {
+    float: right;
+}
+
+/* ANIMATION */
+@keyframes moveLeft {
+    from {
+        transform: translate(200%, 0);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes homeCircle {
+    0% {
+    }
+    25% {
+    }
+    50% {
+        border-top: 0.5px solid #3b3b3b;
+        border-bottom: 0.5px solid #3b3b3b;
+    }
+    75% {
+    }
+    100% {
+        border-right: 0.5px solid #3b3b3b;
+        border-left: 0.5px solid #3b3b3b;
+    }
+}
+@keyframes iconCircle {
+    0%{
+        border-radius: 50%;
+        background-color: rgba(255, 221, 111, 0.74);
+        transform: rotateY(0);
+    }
+    60%{
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.7);
+        transform: rotateY(180deg);
+    }
+    100%{
+        border-radius: 50%;
+        background-color: rgba(255, 221, 111, 0.74);
+        transform: rotateY(0);
+    }
+}
+
+/* LOADING */
+
+
+/* HEADER */
+header {
+    z-index: 9999;
+}
+header .inner {
+    width: 85%;
+    height: 80px;
+    position: fixed;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    padding: 5px 10px;
+    font-size: 18px;
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+header .inner .menu-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #3b3b3b;
+    /* box-shadow: 0px 3px 3px 1px rgba(187, 187, 187, 0.493); */
+    animation: moveLeft 2.5s linear;
+}
+header .inner .menu-group a {
+    opacity: 0;
+    font-family: 'Staatliches', cursive;
+    font-size: 19px;
+    text-decoration: none;
+    animation: fadeIn 2s linear 3s;
+    animation-fill-mode: forwards;
+}
+header .inner .menu-group a:visited {
+    color: #3b3b3b;
+}
+header .inner .menu-group .logo {
+    width: 20%;
+    margin-left: 50px;
+}
+header .inner .menu-group .logo a {
+    color: #3b3b3b;
+    border: 1px solid #3b3b3b;
+    border-radius: 50%;
+    padding: 10px;
+}
+header .inner .menu-group .logo a:hover {
+    border: 1px solid white;
+    background-color: white;
+}
+header .inner .menu-group .main-menu {
+    width: 80%;
+    display: flex;
+    text-align: center;
+}
+header .inner .menu-group .main-menu li {
+    width: 20%;
+}
+header .inner .menu-group .main-menu li a:hover {
+    cursor: pointer;
+    color: rgb(255, 202, 27);
+}
+
+/* HOME */
+#home {
+    height: 100vh;
+}
+#home .inner {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    margin: 30px auto;
+}
+#home .inner .home__title {
+    width: 100%;
+    line-height: 1.8;
+    position: relative;
+}
+#home .inner .home__title .circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transform: translate(100px, -70px);
+    z-index: 1;
+    animation: homeCircle 2.5s linear 5s;
+    animation-fill-mode: forwards;
+}
+#home .inner .home__title svg {
+    position: relative;
+    z-index: 3000;
+}
+#home .inner .home__title svg text{
+    font-family: 'Staatliches', cursive;
+    font-size: 120px;
+    fill: transparent;
+    stroke-dasharray: 326px;
+    animation: stroke 3.2s linear 3s;
+    animation-fill-mode: forwards;
+}
+@keyframes stroke {
+    0% {
+        stroke: #3b3b3b;
+        stroke-width: 3px;
+        stroke-dashoffset: 326px;
+    }
+    10% {
+    }
+
+    70% {
+        fill: transparent;
+    }
+
+    98% {
+        stroke: #3b3b3b;
+        stroke-width: 3px;
+    }
+
+    100% {
+        fill: #3b3b3b;
+        stroke: #3b3b3b;
+        stroke-width: 3px;
+        stroke-dashoffset: 0px;
+        stroke-dasharray: 550px;
+    }
+}
+/* #home .inner .home__title svg text:nth-last-child(1) {
+    animation-name: stroke, letterMove;
+    animation-delay: 3s, 8s;
+    animation-duration: 5s 2s;
+    animation-timing-function: linear, linear;
+    animation-fill-mode: forwards,forwards;
+} */
+#home .inner .home__title p {
+    font-family: 'Staatliches', cursive;
+    font-size: 65px;
+    color: rgb(255, 202, 27);
+    opacity: 0;
+    animation: fadeIn 2.5s linear 5s;
+    animation-fill-mode: forwards;
+    position: relative;
+    z-index: 3000;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ABOUTME */
+#aboutme .inner {
+    width: 80%;
+    margin: 100px auto;
+}
+#aboutme .inner h3 {
+    color: #3b3b3b;
+    font-family: 'Staatliches', cursive;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#aboutme .inner .aboutme__container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#aboutme .inner .aboutme__container .aboutme__img {
+    width: 20%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 0.5px solid #3b3b3b;
+}
+#aboutme .inner .aboutme__container .aboutme__img img {
+    width: 100%;
+}
+#aboutme .inner .aboutme__container .aboutme__summary {
+    width: 73%;
+    padding: 10px;
+    color: #3b3b3b;
+    line-height: 2.3;
+    box-sizing: border-box;
+}
+#aboutme .inner .aboutme__container .aboutme__summary span {
+    font-size: 18px;
+    font-weight: 700;
+}
+#aboutme .inner .aboutme__container .aboutme__summary p {
+    font-size: 15px;
+    padding-top: 15px;
+}
+#aboutme .inner .info__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 50px 0;
+}
+#aboutme .inner .info__container .wrapper {
+    display: flex;
+    padding: 25px 20px;
+}
+#aboutme .inner .info__container .wrapper .info_icon {
+    width: 40px;
+    margin-right: 50px;
+}
+#aboutme .inner .info__container .wrapper .info_icon img {
+    width: 100%;
+}
+#aboutme .inner .info__container .wrapper .info_field {
+    text-align: left;
+}
+#aboutme .inner .info__container .wrapper .info_field .info_label {
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+#aboutme .inner .info__container .wrapper .info_field .info_value {
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 27px;
+}
+
+/* SKILLS */
+#skills .inner {
+    width: 80%;
+    margin: 100px auto;
+}
+#skills .inner h3 {
+    color: #3b3b3b;
+    font-family: 'Staatliches', cursive;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+}
+#skills .inner .skills__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#skills .inner .skills__container .wrapper {
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px 20px;
+}
+#skills .inner .skills__container .wrapper:hover {
+    animation: iconCircle 1.5s linear;
+    animation-fill-mode: forwards;
+}
+#skills .inner .skills__container .wrapper .skills_icon i {
+    font-size: 75px;
+}
+#skills .inner .skills__container .wrapper .skills_name {
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* PORTFOLIO */
+#portfolio .inner {
+    width: 85%;
+    margin: 150px auto;
+}
+#portfolio .inner h3 {
+    color: #3b3b3b;
+    font-family: 'Staatliches', cursive;
+    font-size: 75px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 85px;
+}
+#portfolio .inner .portfolio__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#portfolio .inner .portfolio__container .wrapper {
+    width: 30%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    padding: 15px;
+}
+#portfolio .inner .portfolio__container .wrapper .portfolio_img {
+    box-sizing: border-box;
+}
+#portfolio .inner .portfolio__container .wrapper .portfolio_img img {
+    width: 100%;
+}
+/* #portfolio .inner .portfolio__container .wrapper .portfolio_img img:hover {
+    width: 100%;
+    transition: all 0.5s linear;
+} */
+
+
+/* CONTACT */
+#contact .inner {
+    width: 80%;
+    margin: 150px auto;
+}
+#contact .inner h3 {
+    color: #3b3b3b;
+    font-family: 'Staatliches', cursive;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+}
