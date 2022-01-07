@@ -14,6 +14,7 @@
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet" >
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet" >
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dba64c1487.js" crossorigin="anonymous"></script>
     
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -39,10 +40,14 @@
         <header>
             <div class="inner">
 
+                <div class="logo float--left">
+                    <a href="">KIM GEUM MI</a>
+                </div>
+                <div class="menu-bar float--right">
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="menu-group">
-                    <div class="logo float--left">
-                        <a href="">KIM</a>
-                    </div>
                     <ul class="main-menu float--right">
                         <li><a href="#home">HOME</a></li>
                         <li><a href="#aboutme">ABOUTME</a></li>
@@ -59,21 +64,9 @@
             <div class="inner">
 
                 <div class="home__title">
-                    <svg width="700" height="120" viewBox="0 0 700 120">
-                        <text x="0" y="85%">H</text>
-                        <text x="60" y="85%">E</text>
-                        <text x="115" y="85%">L</text>
-                        <text x="165" y="85%">L</text>
-                        <text x="215" y="85%">O</text>
-                        <text x="265" y="85%">,</text>
-                        <text x="315" y="85%">W</text>
-                        <text x="395" y="85%">O</text>
-                        <text x="455" y="85%">R</text>
-                        <text x="515" y="85%">L</text>
-                        <text x="565" y="85%">D</text>
-                        <text x="635" y="85%">!</text>
+                    <svg width="100%" height="50%" viewBox="0 0 1200 180" preserveAspectRatio="xMinYMin meet" text-anchor="start">
+                        <text x="0" y="85%">HELLO, WORLD!</text>
                     </svg>
-                    <!-- <div class="circle"></div> -->
                     <p>Welcome to my portfolio page</p>
                 </div>
 
@@ -98,51 +91,21 @@
                     </div>
                 </div>
                 <div class="info__container">
-                    <div class="wrapper">
-                        <div class="info_icon">
-                            <img src="./img/icon_name.png" alt="nameImg">
-                        </div>
-                        <div class="info_field">
-                            <div class="info_label">이름</div>
-                            <div class="info_value">김금미</div>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="info_icon">
-                            <img src="./img/icon_birth.png" alt="birthImg">
-                        </div>
-                        <div class="info_field">
-                            <div class="info_label">생년월일</div>
-                            <div class="info_value">1993.09.17</div>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="info_icon">
-                            <img src="./img/icon_location.png" alt="locationImg">
-                        </div>
-                        <div class="info_field">
-                            <div class="info_label">주소지</div>
-                            <div class="info_value">서울시 관악구</div>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="info_icon">
-                            <img src="./img/icon_phone.png" alt="phoneImg">
-                        </div>
-                        <div class="info_field">
-                            <div class="info_label">연락처</div>
-                            <div class="info_value">010.6396.9141</div>
-                        </div>
-                    </div>
-                    <div class="wrapper">
-                        <div class="info_icon">
-                            <img src="./img/icon_email.png" alt="emailImg">
-                        </div>
-                        <div class="info_field">
-                            <div class="info_label">E-MAIL</div>
-                            <div class="info_value">geummi0917@gmail.com</div>
-                        </div>
-                    </div>
+                    <ul class="profile"> PROFILE
+                        <li>김금미</li>
+                        <li>1993.09.17</li>
+                        <li>서울시 관악구 거주</li>
+                        <li>geummi0917@gmail.com</li>
+                        <li>010 6396 9141</li>
+                    </ul>
+                    <ul class="history"> HISTORY
+                        <li>한국산업기술대학교 컴퓨터공학과 졸업<br/><span>(2012.03 ~ 2018.02)</span></li>
+                        <li>비트캠프 자바 웹&앱 개발자 양성과정 이수<br/><span>(2017.11 ~ 2018.05)</span></li>
+                        <li>서울시 공공연계 중소혁신기업 청년인턴 근무<br/><span>(2020.10 ~ 2020.12)</span></li>
+                    </ul>
+                    <ul class="license"> LICENSE
+                        <li>정보처리기사 취득 <span>(2018.11)</span></li>
+                    </ul>
                 </div>
 
             </div>
@@ -153,41 +116,59 @@
 
                 <h3>SKILLS</h3>
                 <div class="skills__container">
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-html5" style="color:rgb(255, 94, 45);"></i>
+                    <div class="skills_wrapper html">
+                        <div class="pie-chart">
+                            <div class="skills_name">HTML5</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-html5" style="color:rgb(255, 94, 45);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">HTML5</div>
                     </div>
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-css3-alt" style="color:rgb(68, 87, 255);"></i>
+                    <div class="skills_wrapper css">
+                        <div class="pie-chart">
+                            <div class="skills_name">CSS3</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-css3-alt" style="color:rgb(68, 87, 255);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">CSS3</div>
                     </div>
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-js-square" style="color:rgb(255, 207, 50);"></i>
+                    <div class="skills_wrapper js">
+                        <div class="pie-chart">
+                            <div class="skills_name">JAVASCRIPT</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-js-square" style="color:rgb(255, 207, 50);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">JAVASCRIPT</div>
                     </div>
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-git" style="color:rgb(24, 24, 24);"></i>
+                    <div class="skills_wrapper git">
+                        <div class="pie-chart">
+                            <div class="skills_name">GIT</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-git" style="color:rgb(24, 24, 24);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">GIT</div>
                     </div>
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-github" style="color:rgb(58, 58, 58);"></i>
+                    <div class="skills_wrapper github">
+                        <div class="pie-chart">
+                            <div class="skills_name">GITHUB</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-github" style="color:rgb(58, 58, 58);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">GITHUB</div>
                     </div>
-                    <div class="wrapper">
-                        <div class="skills_icon">
-                            <i class="fab fa-bootstrap" style="color:rgb(38, 44, 94);"></i>
+                    <div class="skills_wrapper react">
+                        <div class="pie-chart">
+                            <div class="skills_name">REACT</div>
+                            <div class="skills_icon">
+                                <i class="fab fa-react" style="color:rgb(74, 211, 253);"></i>
+                            </div>
+                            <span></span>
                         </div>
-                        <div class="skills_name">BOOTSTRAP</div>
                     </div>
                 </div>
 
