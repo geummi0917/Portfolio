@@ -1,7 +1,28 @@
 $(document).ready(function () {
 
+    // 동그라미 커서 생성
+    const mouseCircle = document.querySelector('.mouse-circle');
+
+    document.body.addEventListener("scroll", cursor);
+    window.addEventListener("mousemove", cursor);
+    
+    function cursor(e) {
+        mouseCircle.style.left = e.pageX + "px";
+        mouseCircle.style.top = e.pageY + "px";
+    }
+
+    // 마우스오버 이벤트
+    var logo = document.querySelector('.logo');
+    logo.addEventListener("mouseover", () => {
+        mouseCircle.classList.toggle('mouseOver');
+    })
+    logo.addEventListener("mouseout", () => {
+        mouseCircle.classList.toggle('mouseOver');
+    })
+
+
     // 메뉴바 클릭 시 변경
-    var menuBar = document.querySelector('.menu-bar');
+    const menuBar = document.querySelector('.menu-bar');
     var menuList = document.querySelector('.main-menu');
 
     menuBar.addEventListener("click", function() {
@@ -33,8 +54,8 @@ $(document).ready(function () {
 
     }).on('start', function(){
         drawChart(90, '.html', 'rgb(255, 202, 27)', '.html span');
-        drawChart(90, '.css', 'rgb(255, 202, 27)', '.css span');
-        drawChart(80, '.js', 'rgb(255, 202, 27)', '.js span');
+        drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
+        drawChart(70, '.js', 'rgb(255, 202, 27)', '.js span');
         drawChart(60, '.git', 'rgb(255, 202, 27)', '.git span');
         drawChart(70, '.github', 'rgb(255, 202, 27)', '.github span');
         drawChart(30, '.react', 'rgb(255, 202, 27)', '.react span');
