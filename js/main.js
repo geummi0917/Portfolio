@@ -132,10 +132,10 @@ $(document).ready(function () {
         .on('start', function() {
             drawChart(80, '.html', 'rgb(255, 202, 27)', '.html span');
             drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
-            drawChart(70, '.js', 'rgb(255, 202, 27)', '.js span');
-            drawChart(60, '.git', 'rgb(255, 202, 27)', '.git span');
-            drawChart(60, '.github', 'rgb(255, 202, 27)', '.github span');
-            drawChart(30, '.react', 'rgb(255, 202, 27)', '.react span');
+            drawChart(60, '.js', 'rgb(255, 202, 27)', '.js span');
+            drawChart(50, '.git', 'rgb(255, 202, 27)', '.git span');
+            drawChart(50, '.github', 'rgb(255, 202, 27)', '.github span');
+            drawChart(20, '.react', 'rgb(255, 202, 27)', '.react span');
         })
         .addTo(controller);
 
@@ -148,7 +148,7 @@ $(document).ready(function () {
         for(let j=0; j<pfElements.length; j++) {
             var pfEvent = new ScrollMagic.Scene({
                 triggerElement: pfElements[i][j],
-                triggerHook: 0.5
+                triggerHook: 1
             })
                 .setClassToggle(pfElements[i][j], "active")
                 .addTo(controller);

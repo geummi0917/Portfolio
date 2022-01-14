@@ -11,7 +11,7 @@ body {
 }
 .inner h3 {
     font-family: 'Staatliches', cursive;
-    font-size: 65px;
+    font-size: 6.5vw;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -242,7 +242,7 @@ header .inner .menu-group .main-menu li {
 header .inner .menu-group .main-menu li a {
     color: #3b3b3b;
     font-family: 'Staatliches', cursive;
-    font-size: 20px;
+    font-size: 2vw;
 }
 header .inner .menu-group .main-menu li a:visited {
     color: #3b3b3b;
@@ -267,7 +267,7 @@ header .inner .menu-group .main-menu li a:hover {
 }
 #home .inner video {
     position: absolute;
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     transform: rotate(180deg);
@@ -340,16 +340,15 @@ header .inner .menu-group .main-menu li a:hover {
     margin: auto 0;
     line-height: 2.3;
     box-sizing: border-box;
-    /* text-align: right; */
 }
 #aboutme .inner .ab__container .ab__summary span {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     font-weight: 700;
 }
 #aboutme .inner .ab__container .ab__summary p {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1rem;
+    font-size: 1.1vw;
     font-weight: 400;
     padding-top: 15px;
 }
@@ -370,12 +369,12 @@ header .inner .menu-group .main-menu li a:hover {
     margin: 20px 0;
     margin-left: 10px;
     font-family: 'Staatliches', cursive;
-    font-size: 1.75rem;
+    font-size: 2.2vw;
 }
 #aboutme .inner .info__container ul li {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 1.2vw;
     line-height: 1.7;
     border-left: 4px solid rgba(255, 204, 35, 0.938);
     margin: 15px 0;
@@ -385,7 +384,7 @@ header .inner .menu-group .main-menu li a:hover {
     margin-top: 20px;
 }
 #aboutme .inner .info__container ul li span {
-    font-size: 0.78rem;
+    font-size: 0.95vw;
     color: #66635e;
     vertical-align: baseline;
 }
@@ -399,6 +398,7 @@ header .inner .menu-group .main-menu li a:hover {
     margin: 70px auto;
 }
 #skills .inner h3 {
+    font-size: 5vw;
     margin-bottom: 80px;
 }
 #skills .inner .sk__container {
@@ -409,16 +409,16 @@ header .inner .menu-group .main-menu li a:hover {
 }
 #skills .inner .sk__container .sk_wrapper {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     margin: 15px auto;
     text-align: center;
     border-radius: 50%;
     transition: 0.3s;
 }
 #skills .inner .sk__container .sk_wrapper .pie-chart {
-    width: 165px;
-    height: 165px;
+    width: 180px;
+    height: 180px;
     position: absolute;
     border-radius: 50%;
     background-color: white;
@@ -433,17 +433,17 @@ header .inner .menu-group .main-menu li a:hover {
     grid-template-columns: repeat(auto-fill, 1fr);
 }
 #skills .inner .sk__container .sk_wrapper .sk_icon i {
-    font-size: 70px;
+    font-size: 4vw;
     margin: 0 auto;
 }
 #skills .inner .sk__container .sk_wrapper .sk_name {
     font-family: 'Staatliches', cursive;
-    font-size: 1.3rem;
+    font-size: 2vw;
     margin-top: 15px;
 }
 #skills .inner .sk__container .sk_wrapper span {
     font-family: 'Staatliches', cursive;
-    font-size: 1.2rem;
+    font-size: 2vw;
     margin-bottom: 12px;
 }
 
@@ -478,7 +478,7 @@ header .inner .menu-group .main-menu li a:hover {
     top: -20px;
     left: -500px;
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 5.5rem;
+    font-size: 6.5vw;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__num.active {
     transition: all 0.3s linear;
@@ -516,12 +516,12 @@ header .inner .menu-group .main-menu li a:hover {
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc h5 {
     font-family: 'Staatliches', cursive;
-    font-size: 3.5rem;
+    font-size: 3.5vw;
     text-align: center;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc p {
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.8vw;
     padding: 20px 0;
     margin-bottom: 5px;
     text-align: center;
@@ -537,7 +537,7 @@ header .inner .menu-group .main-menu li a:hover {
     background-color: transparent;
     box-shadow: 2px 2px 3px 1px rgba(170, 170, 170, 0.7);
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1rem;
+    font-size: 1.2vw;
     color: rgb(110, 110, 110);
     padding: 3px 20px;
     transition: all 0.2s linear;
@@ -634,12 +634,187 @@ footer .inner {
 }
 
 /* MEDIA QUERY */
+@media screen and (max-aspect-ratio: 1219/685) {
+    #home .inner video {
+        width: auto;
+        height: 100vh;
+     }
+ }
+ 
 @media screen and (min-width:1024px) {
-	/* Desktop */
+
+
+
 }
+
 @media screen and (min-width:768px) and (max-width: 1023px) {
-	/* Tablet */
+
+/* ABOUTME */
+#aboutme .inner {
+    margin: 30px auto;
 }
+#aboutme .inner .ab__container {
+
+}
+#aboutme .inner .ab__container .ab__img {
+    padding: 0;
+}
+#aboutme .inner .ab__container .ab__summary {
+    padding: 0;
+}
+#aboutme .inner .info__container {
+    margin: 0 auto;
+}
+
+/* SKILLS */
+#skills .inner .sk__container .sk_wrapper {
+    width: 23vw;
+    height: 23vw;
+}
+#skills .inner .sk__container .sk_wrapper .pie-chart {
+    width: 18vw;
+    height: 18vw;
+}
+
+/* PORTFOLIO */
+#portfolio .inner .pf__container .pf_wrapper {
+    height: calc(var(--vh, 1vh) * 100);
+    flex-direction: column;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__num {
+    top: 30px;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__img {
+    width: 80%;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc h5 {
+    font-size: 4.3vw;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc p {
+    font-size: 2.2vw;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc .pf__button button {
+    font-size: 1.8vw;
+}
+
+}
+
 @media screen and (max-width:767px){ 
-	/* Mobile */
+
+/* ABOUTME */
+#aboutme .inner {
+    width: 85%;
+    margin: 30px auto;
+}
+#aboutme .inner .ab__container {
+    margin: auto 0;
+    flex-direction: column;
+    align-items: center;
+}
+#aboutme .inner .ab__container .ab__img {
+    padding: 0;
+    display: flex;
+}
+#aboutme .inner .ab__container .ab__img img {
+    justify-content: center;
+    margin: 0 auto;
+    width: 50%;
+}
+#aboutme .inner .ab__container .ab__summary {
+    padding: 10px 40px;
+    text-align: center;
+}
+#aboutme .inner .ab__container .ab__summary span {
+}
+#aboutme .inner .info__container {
+    margin: 30px 10px;
+    flex-direction: column;
+}
+#aboutme .inner .info__container ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 3vw;
+    margin: 10px 0;
+}
+#aboutme .inner .info__container ul li {
+    margin-top: 0;
+    margin: 10px 0;
+}
+#aboutme .inner .info__container ul li:first-of-type {
+    margin-top: 0;
+}
+
+/* SKILLS */
+#skills .inner {
+    width: 85%;
+    margin: 20px auto;
+}
+#skills .inner .sk__container .sk_wrapper {
+    width: 20vw;
+    height: 20vw;
+}
+#skills .inner .sk__container .sk_wrapper .pie-chart {
+    width: 15vw;
+    height: 15vw;
+}
+
+/* PORTFOLIO */
+#portfolio .inner {
+    width: 85%;
+    margin: 30px auto;
+}
+#portfolio .inner h3 {
+    margin-bottom: 30px;
+}
+#portfolio .inner .pf__container .pf_wrapper {
+    flex-direction: column;
+    height: calc(var(--vh, 1vh) * 80);
+    margin: 10px auto;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__num {
+    top: 30px;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__img {
+    width: 70%;
+    margin: 0 auto;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc {
+    width: 90%;
+    margin: 0 auto;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc h5 {
+    font-size: 5vw;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc p {
+    font-size: 2.5vw;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc .pf__button button {
+    font-size: 1.7vw;
+}
+
+/* CONTACT */
+#contact .inner {
+    padding: 20px 0;
+}
+#contact .inner h3 {
+    font-size: 6vw;
+}
+#contact .inner p {
+    font-size: 3vw;
+}
+#contact .inner .contact__container {
+    margin: 20px auto;
+}
+#contact .inner .contact__container div i {
+    font-size: 4vw;
+}
+#contact .inner .contact__container div p {
+    font-size: 3vw;
+}
+
+/* FOOTER */ 
+footer .inner {
+    padding: 20px;
+    font-size: 1.4vw;
+}
 }
