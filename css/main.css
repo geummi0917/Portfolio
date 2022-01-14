@@ -803,7 +803,8 @@ footer .inner {
     margin: 10px auto;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__num {
-    top: 30px;
+    top: 20px;
+    font-size: 8.5vw;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__img {
     width: 100%;
