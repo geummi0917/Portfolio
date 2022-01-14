@@ -253,10 +253,10 @@ header .inner .menu-group .main-menu li a:hover {
 
 /* HOME */
 #home {
-    height: 100vh;
     position: relative;
     overflow: hidden;
     z-index: -1;
+    box-sizing: border-box;
 }
 #home .inner {
     display: flex;
@@ -293,7 +293,7 @@ header .inner .menu-group .main-menu li a:hover {
 }
 #home .inner .home__title p {
     font-family: 'Staatliches', cursive;
-    font-size: 65px;
+    font-size: 6vw;
     color: rgb(255, 202, 27);
     opacity: 0;
     animation: fadeIn 2.5s linear 3s;
@@ -330,7 +330,7 @@ header .inner .menu-group .main-menu li a:hover {
     box-sizing: border-box;
 }
 #aboutme .inner .ab__container .ab__img img {
-    width: 60%;
+    width: 70%;
     border-radius: 70px;
 }
 #aboutme .inner .ab__container .ab__summary {
@@ -344,7 +344,7 @@ header .inner .menu-group .main-menu li a:hover {
 }
 #aboutme .inner .ab__container .ab__summary span {
     font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
 }
 #aboutme .inner .ab__container .ab__summary p {
@@ -375,7 +375,7 @@ header .inner .menu-group .main-menu li a:hover {
 #aboutme .inner .info__container ul li {
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     line-height: 1.7;
     border-left: 4px solid rgba(255, 204, 35, 0.938);
     margin: 15px 0;
@@ -469,7 +469,7 @@ header .inner .menu-group .main-menu li a:hover {
     display: flex;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 80);
     align-items: center;
     justify-content: center;
 }
@@ -517,7 +517,6 @@ header .inner .menu-group .main-menu li a:hover {
 #portfolio .inner .pf__container .pf_wrapper .pf__desc h5 {
     font-family: 'Staatliches', cursive;
     font-size: 3.5rem;
-    margin-top: 20%;
     text-align: center;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc p {
@@ -632,4 +631,15 @@ footer .inner {
     font-size: 0.9rem;
     letter-spacing: 0.5px;
     font-weight: lighter;
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width:1024px) {
+	/* Desktop */
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+	/* Tablet */
+}
+@media screen and (max-width:767px){ 
+	/* Mobile */
 }

@@ -1,5 +1,17 @@
 $(document).ready(function () {
 
+    function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+      
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+    window.addEventListener('resize', () => setScreenSize());
+
+    $('#home').css({
+        "height": window.innerHeight+"px"
+    })
+
+
     // 동그라미 커서 생성
     const mouseCircle = document.querySelector('.custom-mouse');
 
@@ -25,6 +37,7 @@ $(document).ready(function () {
     logo.addEventListener("mouseout", mouseOver);
     menuBar.addEventListener("mouseover", mouseOver);
     menuBar.addEventListener("mouseout", mouseOver);
+    
     for(let i=0; i<menuList.length; i++) {
         menuList[i].addEventListener("mouseover", mouseOver);
         menuList[i].addEventListener("mouseout", mouseOver);
@@ -32,7 +45,6 @@ $(document).ready(function () {
     
     // 메뉴바 클릭 시 변경
     menuBar.addEventListener("click", function() {
-        console.log('얍')
         menuBar.classList.toggle("active");
         mainMenu.classList.toggle("show");
     })
@@ -118,11 +130,11 @@ $(document).ready(function () {
         triggerHook: 0.5
     })
         .on('start', function() {
-            drawChart(90, '.html', 'rgb(255, 202, 27)', '.html span');
+            drawChart(80, '.html', 'rgb(255, 202, 27)', '.html span');
             drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
             drawChart(70, '.js', 'rgb(255, 202, 27)', '.js span');
             drawChart(60, '.git', 'rgb(255, 202, 27)', '.git span');
-            drawChart(70, '.github', 'rgb(255, 202, 27)', '.github span');
+            drawChart(60, '.github', 'rgb(255, 202, 27)', '.github span');
             drawChart(30, '.react', 'rgb(255, 202, 27)', '.react span');
         })
         .addTo(controller);
