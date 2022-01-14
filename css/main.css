@@ -806,7 +806,7 @@ footer .inner {
     top: 30px;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__img {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc {
