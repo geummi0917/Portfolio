@@ -1,13 +1,13 @@
 /* DEFAULT */
+body {
+    overflow-x: hidden;
+}
 .body__container {
     width: 100%;
     color: #3b3b3b;
     font-size: 16px;
     cursor: none;
     -ms-overflow-style: none;
-}
-::-webkit-scrollbar {
-    display: none;
 }
 .inner h3 {
     font-family: 'Staatliches', cursive;
@@ -310,11 +310,16 @@ header .inner .menu-group .main-menu li a:hover {
     flex-direction: column;
 }
 #aboutme .inner .ab__container {
+    opacity: 0;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 10px;
     margin-bottom: 80px;
+}
+#aboutme .inner .ab__container.active {
+    opacity: 1;
+    transition: all 0.6s linear;
 }
 #aboutme .inner .ab__container .ab__img {
     flex-grow: 1;
@@ -349,10 +354,17 @@ header .inner .menu-group .main-menu li a:hover {
     padding-top: 15px;
 }
 #aboutme .inner .info__container {
+    opacity: 0;
     display: flex;
     justify-content: center;
     margin: 10px;
     justify-content: space-between;
+    transform: translateY(150px);
+}
+#aboutme .inner .info__container.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1s linear;
 }
 #aboutme .inner .info__container ul {
     margin: 20px 0;
@@ -379,9 +391,12 @@ header .inner .menu-group .main-menu li a:hover {
 }
 
 /* SKILLS */
+#skills {
+    padding: 10px 0;
+}
 #skills .inner {
     width: 80%;
-    margin: 150px auto;
+    margin: 70px auto;
 }
 #skills .inner h3 {
     margin-bottom: 80px;
@@ -433,12 +448,15 @@ header .inner .menu-group .main-menu li a:hover {
 }
 
 /* PORTFOLIO */
+#portfolio {
+    padding: 10px 0;
+}
 #portfolio .inner {
     width: 80%;
-    margin: 150px auto;
+    margin: 100px auto 50px;
 }
 #portfolio .inner h3 {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 #portfolio .inner .pf__container {
     display: flex;
@@ -451,25 +469,37 @@ header .inner .menu-group .main-menu li a:hover {
     display: flex;
     position: relative;
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     align-items: center;
     justify-content: center;
 }
-#portfolio .inner .pf__container .pf_wrapper .num {
+#portfolio .inner .pf__container .pf_wrapper .pf__num {
     position: absolute;
     top: -20px;
-    left: 0;
+    left: -500px;
     font-family: 'Do Hyeon', sans-serif;
     font-size: 5.5rem;
 }
-#portfolio .inner .pf__container .pf_wrapper:nth-child(2) .num{
+#portfolio .inner .pf__container .pf_wrapper .pf__num.active {
+    transition: all 0.3s linear;
+    left: 0;
+}
+#portfolio .inner .pf__container .pf_wrapper:nth-child(2) .pf__num {
     left: initial;
+    right: -500px;
+}
+#portfolio .inner .pf__container .pf_wrapper:nth-child(2) .pf__num.active {
     right: 0;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__img {
+    opacity: 0;
     width: 60%;
     box-sizing: border-box;
     overflow: hidden;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__img.active {
+    opacity: 1;
+    transition: all 0.5s linear;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__img img{
     width: 100%;
@@ -478,6 +508,11 @@ header .inner .menu-group .main-menu li a:hover {
     display: flex;
     flex-direction: column;
     padding: 0 10px;
+    opacity: 0;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc.active {
+    opacity: 1;
+    transition: all 0.6s linear;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc h5 {
     font-family: 'Staatliches', cursive;
@@ -507,7 +542,9 @@ header .inner .menu-group .main-menu li a:hover {
     color: rgb(110, 110, 110);
     padding: 3px 20px;
     transition: all 0.2s linear;
-}#portfolio .inner .pf__container .pf_wrapper .pf__desc .pf__button button:last-of-type {
+    cursor: none;
+}
+#portfolio .inner .pf__container .pf_wrapper .pf__desc .pf__button button:last-of-type {
     margin-left: 10px;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__desc .pf__button button:hover {
@@ -515,12 +552,11 @@ header .inner .menu-group .main-menu li a:hover {
     border: 0.3px solid rgba(235, 191, 48, 0.3);
     color: #fff;
     transition: all 0.2s linear;
-    cursor: none;
 }
 
 /* CONTACT */
 #contact {
-    background-color: rgba(231, 210, 141, 0.4);
+    border: 20px solid rgba(235, 191, 48, 0.733);
 }
 #contact .inner {
     width: 80%;
@@ -529,9 +565,8 @@ header .inner .menu-group .main-menu li a:hover {
     margin: 0 auto;
 }
 #contact .inner h3 {
-    font-size: 40px;
+    font-size: 50px;
     margin-bottom: 40px;
-    /* color: #fff; */
 }
 #contact .inner p {
     font-family: 'Noto Sans KR', sans-serif;

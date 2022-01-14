@@ -47,11 +47,6 @@ $(document).ready(function () {
             });
         });
     });
-
-    // 홈 타이틀 클릭하면 프로필로 이동
-    // document.querySelector('#home').scrollIntoView({
-    //     behavior: "smooth"
-    // });
     
     // 스킬 차트 그리기
     function drawChart(max, chartClass, colorName, textClass) {
@@ -69,7 +64,7 @@ $(document).ready(function () {
 
     function fillColor(i, chartClass, colorName) {
         $(chartClass).css({
-            "background": "conic-gradient("+colorName+" 0% "+i+"%, #ffffff "+i+"% 100%)"
+            "background": "conic-gradient("+colorName+" 0% "+i+"%, transparent "+i+"% 100%)"
         });
     }
 
@@ -80,7 +75,7 @@ $(document).ready(function () {
     // 스크롤 매직 라이브러리
     var controller = new ScrollMagic.Controller();
 
-    // 흰 배경에서 헤더 색상 변경
+    // 흰 배경에서 로고,메뉴 색상 변경
     var logoColor = TweenMax.to('.logo a', 0.3, {
         color: "#3b3b3b"
     })
@@ -101,22 +96,51 @@ $(document).ready(function () {
         triggerHook: 0.5
     })
         .setTween(menuColor)
-        .addTo(controller)
+        .addTo(controller);
 
-    // 스킬 애니메이션 실행
+    // aboutme 애니메이션
+    var abElements = [ document.querySelector('.ab__container'), 
+                    document.querySelector('.info__container') ];
+
+    for(let i=0; i<abElements.length; i++) {
+        var abEvent = new ScrollMagic.Scene({
+            triggerElement: abElements[0],
+            triggerHook: 0.5
+        })
+            .setClassToggle(abElements[i], "active")
+            .addTo(controller);
+    }
+
+
+    // #skills 애니메이션
     var skillAni = new ScrollMagic.Scene({
         triggerElement: '#skills',
         triggerHook: 0.5
     })
-    .on('start', function() {
-        drawChart(90, '.html', 'rgb(255, 202, 27)', '.html span');
-        drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
-        drawChart(70, '.js', 'rgb(255, 202, 27)', '.js span');
-        drawChart(60, '.git', 'rgb(255, 202, 27)', '.git span');
-        drawChart(70, '.github', 'rgb(255, 202, 27)', '.github span');
-        drawChart(30, '.react', 'rgb(255, 202, 27)', '.react span');
-    })
-    .addTo(controller)
+        .on('start', function() {
+            drawChart(90, '.html', 'rgb(255, 202, 27)', '.html span');
+            drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
+            drawChart(70, '.js', 'rgb(255, 202, 27)', '.js span');
+            drawChart(60, '.git', 'rgb(255, 202, 27)', '.git span');
+            drawChart(70, '.github', 'rgb(255, 202, 27)', '.github span');
+            drawChart(30, '.react', 'rgb(255, 202, 27)', '.react span');
+        })
+        .addTo(controller);
 
+    // #portfolio 애니메이션
+    var pfElements = [ document.querySelectorAll('.pf__num'),
+                    document.querySelectorAll('.pf__img'),
+                    document.querySelectorAll('.pf__desc') ];
+
+    for(let i=0; i<pfElements.length; i++) {
+        for(let j=0; j<pfElements.length; j++) {
+            var pfEvent = new ScrollMagic.Scene({
+                triggerElement: pfElements[i][j],
+                triggerHook: 0.5
+            })
+                .setClassToggle(pfElements[i][j], "active")
+                .addTo(controller);
+        }
+    }
 
 })
