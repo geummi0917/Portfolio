@@ -733,8 +733,12 @@ footer .inner {
     padding: 10px 40px;
     text-align: center;
 }
+#aboutme .inner .ab__container .ab__summary span {
+    font-size: 2vw;
+}
 #aboutme .inner .ab__container .ab__summary p {
     padding-top: 10px;
+    font-size: 1.8vw;
 }
 #aboutme .inner .info__container {
     margin: 30px 10px;
@@ -743,12 +747,13 @@ footer .inner {
 #aboutme .inner .info__container ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    font-size: 3vw;
+    font-size: 4vw;
     margin: 10px 0;
 }
 #aboutme .inner .info__container ul li {
     margin-top: 0;
     margin: 10px 0;
+    font-size: 1.7vw;
 }
 #aboutme .inner .info__container ul li:first-of-type {
     margin-top: 0;
@@ -758,19 +763,30 @@ footer .inner {
 #skills .inner {
     width: 85%;
     margin: 20px auto;
-}#skills .inner h3 {
+}
+#skills .inner h3 {
     margin-bottom: 10px;
 }
 #skills .inner .sk__container {
     margin: 20px auto;
+    grid-template-columns: repeat(2, 1fr);
 }
 #skills .inner .sk__container .sk_wrapper {
-    width: 22vw;
-    height: 22vw;
+    width: 30vw;
+    height: 30vw;
 }
 #skills .inner .sk__container .sk_wrapper .pie-chart {
-    width: 17vw;
-    height: 17vw;
+    width: 25vw;
+    height: 25vw;
+}
+#skills .inner .sk__container .sk_wrapper .sk_name {
+    font-size: 3.5vw;
+}
+#skills .inner .sk__container .sk_wrapper .sk_icon i {
+    font-size: 10vw;
+}
+#skills .inner .sk__container .sk_wrapper span {
+    font-size: 3.5vw;
 }
 
 /* PORTFOLIO */
