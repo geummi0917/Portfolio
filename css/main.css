@@ -11,7 +11,7 @@ body {
 }
 .inner h3 {
     font-family: 'Staatliches', cursive;
-    font-size: 6.5vw;
+    font-size: 4.7vw;
     text-align: center;
     margin-bottom: 70px;
 }
@@ -477,7 +477,7 @@ header .inner .menu-group .main-menu li a:hover {
     top: -20px;
     left: -500px;
     font-family: 'Do Hyeon', sans-serif;
-    font-size: 6.5vw;
+    font-size: 5vw;
 }
 #portfolio .inner .pf__container .pf_wrapper .pf__num.active {
     transition: all 0.3s linear;
