@@ -315,7 +315,7 @@ header .inner .menu-group .main-menu li a:hover {
     justify-content: space-between;
     align-items: flex-start;
     margin: 0 10px;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
 }
 #aboutme .inner .ab__container.active {
     opacity: 1;
@@ -366,10 +366,8 @@ header .inner .menu-group .main-menu li a:hover {
     transition: all 1s linear;
 }
 #aboutme .inner .info__container ul {
-    margin: 20px 0;
+    margin: 10px 0;
     margin-left: 10px;
-    font-family: 'Staatliches', cursive;
-    font-size: 2.2vw;
 }
 #aboutme .inner .info__container ul li {
     font-family: 'Noto Sans KR', sans-serif;
@@ -379,9 +377,13 @@ header .inner .menu-group .main-menu li a:hover {
     border-left: 4px solid rgba(255, 204, 35, 0.938);
     margin: 15px 0;
     padding: 0 10px;
+    vertical-align: middle;
 }
 #aboutme .inner .info__container ul li:first-of-type {
-    margin-top: 20px;
+    font-family: 'Staatliches', cursive;
+    font-size: 2.2vw;
+    padding: 0;
+    border: none;
 }
 #aboutme .inner .info__container ul li span {
     font-size: 0.95vw;
@@ -756,7 +758,7 @@ footer .inner {
     font-size: 1.7vw;
 }
 #aboutme .inner .info__container ul li:first-of-type {
-    margin-top: 0;
+    font-size: 2.5vw;
 }
 
 /* SKILLS */
