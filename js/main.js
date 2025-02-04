@@ -132,10 +132,10 @@ $(document).ready(function () {
         .on('start', function() {
             drawChart(80, '.html', 'rgb(255, 202, 27)', '.html span');
             drawChart(80, '.css', 'rgb(255, 202, 27)', '.css span');
-            drawChart(60, '.js', 'rgb(255, 202, 27)', '.js span');
+            drawChart(80, '.js', 'rgb(255, 202, 27)', '.js span');
             drawChart(50, '.git', 'rgb(255, 202, 27)', '.git span');
             drawChart(50, '.github', 'rgb(255, 202, 27)', '.github span');
-            drawChart(20, '.react', 'rgb(255, 202, 27)', '.react span');
+            drawChart(40, '.react', 'rgb(255, 202, 27)', '.react span');
         })
         .addTo(controller);
 
